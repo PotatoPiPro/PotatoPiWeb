@@ -19,17 +19,12 @@ export const navlinks = [
   },
   {
     href: "/projects",
-    label: "Projects",
+    label: "Blogs",
     icon: IconBriefcase2,
   },
   {
     href: "/blog",
-    label: "Articles",
+    label: "Passages",
     icon: IconArticle,
-  },
-  {
-    href: "/contact",
-    label: "Contact",
-    icon: IconMail,
   },
 ];

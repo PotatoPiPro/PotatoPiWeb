@@ -25,14 +25,11 @@ export const Sidebar = () => {
             animate={{ x: 0 }}
             transition={{ duration: 0.2, ease: "linear" }}
             exit={{ x: -200 }}
-            className="px-6  z-[100] py-10 bg-neutral-100 max-w-[14rem] lg:w-fit  fixed lg:relative  h-screen left-0 flex flex-col justify-between"
+            className="px-8 z-[100] py-10 bg-neutral-100 w-[19rem] fixed lg:relative h-screen left-0 flex flex-col justify-between"
           >
-            <div className="flex-1 overflow-auto">
+            <div className="flex-1">
               <SidebarHeader />
               <Navigation setOpen={setOpen} />
-            </div>
-            <div onClick={() => isMobile() && setOpen(false)}>
-              <Badge href="/resume" text="Read Resume" />
             </div>
           </motion.div>
         )}
@@ -57,7 +54,7 @@ export const Navigation = ({
   const isActive = (href: string) => pathname === href;
 
   return (
-    <div className="flex flex-col space-y-1 my-10 relative z-[100]">
+    <div className="flex flex-col space-y-8 my-14 relative z-[100]">
       {navlinks.map((link: Navlink) => {
         const Icon = link.icon;
         return (
@@ -66,8 +63,8 @@ export const Navigation = ({
             href={link.href}
             onClick={() => isMobile() && setOpen(false)}
             className={twMerge(
-              "text-secondary hover:text-primary transition duration-200 flex items-center space-x-2 py-2 px-2 rounded-md text-sm",
-              isActive(link.href) && "bg-white shadow-lg text-primary"
+            "text-secondary hover:text-primary transition duration-200 flex items-center space-x-2 py-2.5 px-4 rounded-md text-sm w-full",
+            isActive(link.href) && "bg-white shadow-lg text-primary"
             )}
           >
             <Icon
@@ -81,47 +78,42 @@ export const Navigation = ({
         );
       })}
 
-      <Heading as="p" className="text-sm md:text-sm lg:text-sm pt-10 px-2">
-        Socials
-      </Heading>
-      {socials.map((link: Navlink) => {
-        const Icon = link.icon;
-        return (
-          <Link
-            key={link.href}
-            href={link.href}
-            className={twMerge(
-              "text-secondary hover:text-primary transition duration-200 flex items-center space-x-2 py-2 px-2 rounded-md text-sm"
-            )}
-          >
-            <Icon
-              className={twMerge(
-                "h-4 w-4 flex-shrink-0",
-                isActive(link.href) && "text-sky-500"
-              )}
-            />
-            <span>{link.label}</span>
-          </Link>
-        );
-      })}
     </div>
   );
 };
 
 const SidebarHeader = () => {
   return (
-    <div className="flex space-x-2">
-      <Image
-        src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1760&q=80"
-        alt="Avatar"
-        height={40}
-        width={40}
-        className="object-cover object-top rounded-full flex-shrink-0"
-      />
-      <div className="flex text-sm flex-col">
-        <p className="font-bold text-primary">John Doe</p>
-        <p className="font-light text-secondary">Developer</p>
+    <div className="flex flex-col items-center text-center">
+       <div className="w-40 h-40 rounded-full overflow-hidden flex-shrink-0">
+          <Image
+            src="/images/G1andme.png"
+            alt="PotatoPi"
+            height={160}
+            width={160}
+            className="
+              w-40 h-40
+              rounded-full
+              object-cover
+              object-center
+              transition-transform
+              duration-300
+              hover:scale-110
+            "
+          />
+        </div>
+
+      <div className="flex flex-col items-center mt-4">
+        <p className="font-bold text-primary text-3xl">
+          PotatoPi
+        </p>
+
+        <p className="text-secondary text-[12px] mt-3 leading-relaxed max-w-[210px]">
+          I hope you can accept nature as she is.
+        </p>
       </div>
     </div>
   );
 };
+
+

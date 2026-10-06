@@ -1,119 +1,214 @@
-"use client";
 import { Paragraph } from "@/components/Paragraph";
-import Image from "next/image";
-
-import { motion } from "motion/react";
+import { Heading } from "@/components/Heading";
 
 export default function About() {
-  const images = [
-    "https://images.unsplash.com/photo-1692544350322-ac70cfd63614?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1fHx8ZW58MHx8fHx8&auto=format&fit=crop&w=800&q=60",
-    "https://images.unsplash.com/photo-1692374227159-2d3592f274c9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw4fHx8ZW58MHx8fHx8&auto=format&fit=crop&w=800&q=60",
-    "https://images.unsplash.com/photo-1692005561659-cdba32d1e4a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxOHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60",
-    "https://images.unsplash.com/photo-1692445381633-7999ebc03730?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzM3x8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60",
-  ];
   return (
+    <div className="max-w-4xl">
+      
+      {/* Interests */}
+      <section className="mt-14">
+        <Heading
+          as="h2"
+          className="font-black text-xl md:text-xl lg:text-xl"
+        >
+          Study Interests
+        </Heading>
+
+        <Paragraph className="mt-4">
+          Computer Vision
+          <br />
+          Physics
+          <br />
+          Microwave Remote Sensing
+        </Paragraph>
+      </section>
+
+ {/* Experience */}
+      <section className="mt-14">
+  <Heading
+    as="h2"
+    className="font-black text-xl md:text-xl lg:text-xl"
+  >
+    Experience
+  </Heading>
+
+  <div className="mt-6">
+    <div className="flex items-start gap-4">
+      
+      {/* School Logo */}
+      <img
+        src="/images/lzjtu-logo.png"
+        alt="Lanzhou Jiaotong University"
+        className="w-12 h-12 object-contain flex-shrink-0"
+      />
+
+      {/* Experience Information */}
+      <div className="flex-1">
+        <div className="flex items-baseline justify-between gap-4">
+          <p className="font-bold text-primary">
+            Lanzhou Jiaotong University · Faculty of Geomatics
+          </p>
+
+          <p className="text-secondary text-xs whitespace-nowrap">
+            2024 – Present
+          </p>
+        </div>
+
+        <p className="text-secondary text-sm mt-1">
+          B.E. in Remote Sensing
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+       {/* Awards */}
+      <section className="mt-14">
+        <Heading
+          as="h2"
+          className="font-black text-xl md:text-xl lg:text-xl"
+        >
+          Awards
+        </Heading>
+
+        <div className="mt-6 space-y-4">
+          
+         <div className="flex items-baseline justify-between gap-4">
+          <p className="text-primary">
+            Lanzhou Jiaotong University Merit Student Scholarship
+          </p>
+
+          <p className="text-secondary text-xs whitespace-nowrap">
+            2026
+          </p>
+         </div>
+
+         <div className="flex items-baseline justify-between gap-4">
+          <p className="text-primary">
+            Lanzhou Jiaotong University First-Class Scholarship
+          </p>
+
+          <p className="text-secondary text-xs whitespace-nowrap">
+            2025
+          </p>
+         </div>
+       </div>
+      </section>
+
+      
+
+      {/* Ongoing Study */}
+      <section className="mt-14">
+  <Heading
+    as="h2"
+    className="font-black text-xl md:text-xl lg:text-xl"
+  >
+    Ongoing Study (Year 3  Semester 1)
+  </Heading>
+
+  <div className="mt-6 space-y-2">
+    <p>Digital Photogrammetry</p>
+    <p>LiDAR Remote Sensing</p>
+    <p>
+      Remote Sensing Image Processing Algorithms
+    </p>
+    <p>GNSS Principles and Applications</p>
+    <p>
+      Error Theory and Surveying Adjustment
+    </p>
+    <p>Drone-based Engineering Inspection</p>
+    <p>English for Geomatics Engineering</p>
+    <p>Physics Laboratory Training</p>
+    <p>
+          <span className="text-blue-600 italic">Informal: </span>
+          Machine Learning , Fundamentals of Remote Sensing Physics
+    </p>
+  </div>
+</section>
+
+{/* Previous Semesters */}
+<section className="mt-14">
+  <Heading
+    as="h2"
+    className="font-black text-xl md:text-xl lg:text-xl"
+  >
+    Previous Semesters (Selected)
+  </Heading>
+
+  <div className="mt-6 space-y-3">
+
+    {/* 2025-2026 */}
+<details className="group border-b border-neutral-200 pb-3">
+  <summary className="cursor-pointer list-none flex items-center justify-between gap-4 py-2">
+    <span className="font-bold text-primary">
+      2025–2026 (Year 2)
+    </span>
+
+    <span className="text-secondary text-sm transition-transform group-open:rotate-180">
+      ↓
+    </span>
+  </summary>
+
+  <div className="mt-4 ml-1 space-y-6 text-sm text-secondary">
+
+
     <div>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-10 my-10">
-        {images.map((image, index) => (
-          <motion.div
-            key={image}
-            initial={{
-              opacity: 0,
-              y: -50,
-              rotate: 0,
-            }}
-            animate={{
-              opacity: 1,
-              y: 0,
-              rotate: index % 2 === 0 ? 3 : -3,
-            }}
-            transition={{ duration: 0.2, delay: index * 0.1 }}
-          >
-            <Image
-              src={image}
-              width={200}
-              height={400}
-              alt="about"
-              className="rounded-md object-cover transform rotate-3 shadow-xl block w-full h-40 md:h-60 hover:rotate-0 transition duration-200"
-            />
-          </motion.div>
-        ))}
-        {/* 
-        // <Image
-        //   src="https://images.unsplash.com/photo-1692544350322-ac70cfd63614?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1fHx8ZW58MHx8fHx8&auto=format&fit=crop&w=800&q=60"
-        //   width={200}
-        //   height={400}
-        //   alt="about"
-        //   className="rounded-md object-cover transform rotate-3 shadow-xl block w-full h-40 md:h-60 hover:rotate-0 transition duration-200"
-        // />
-        // <Image
-        //   src="https://images.unsplash.com/photo-1692374227159-2d3592f274c9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw4fHx8ZW58MHx8fHx8&auto=format&fit=crop&w=800&q=60"
-        //   width={200}
-        //   height={400}
-        //   alt="about"
-        //   className="rounded-md object-cover transform -rotate-3 shadow-xl block w-full h-40 md:h-60  hover:rotate-0 transition duration-200"
-        // />
-        // <Image
-        //   src="https://images.unsplash.com/photo-1692005561659-cdba32d1e4a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxOHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60"
-        //   width={200}
-        //   height={400}
-        //   alt="about"
-        //   className="rounded-md object-cover transform rotate-3 shadow-xl block w-full h-40 md:h-60  hover:rotate-0 transition duration-200"
-        // />
-        // <Image
-        //   src="https://images.unsplash.com/photo-1692445381633-7999ebc03730?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzM3x8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60"
-        //   width={200}
-        //   height={400}
-        //   alt="about"
-        //   className="rounded-md object-cover transform -rotate-3 shadow-xl block w-full h-40 md:h-60  hover:rotate-0 transition duration-200"
-        // /> */}
-      </div>
 
-      <div className="max-w-4xl">
-        <Paragraph className=" mt-4">
-          Hey there, I&apos;m John Doe - a passionate developer, avid writer,
-          and a connoisseur of awesome design. Welcome to my corner of the
-          digital world!
-        </Paragraph>
-        <Paragraph className=" mt-4">
-          Since the early days of my journey, I&apos;ve been captivated by the
-          art of crafting exceptional digital experiences. As a developer, I
-          thrive on turning lines of code into functional and elegant solutions.
-          My goal is to not just create software, but to build digital marvels
-          that seamlessly merge form and function.
-        </Paragraph>
-
-        <Paragraph className=" mt-4">
-          But my journey doesn&apos;t stop at coding. With a heart full of words
-          and a mind brimming with ideas, I&apos;ve ventured into the realm of
-          writing. From tech articles that unravel complex concepts to creative
-          tales that ignite the imagination, I weave words to inform, entertain,
-          and inspire.
-        </Paragraph>
-        <Paragraph className=" mt-4">
-          What sets me apart is my unwavering appreciation for design. I believe
-          that aesthetics and usability go hand in hand. My eye for awesome
-          design ensures that every project I undertake not only works
-          flawlessly under the hood but also looks stunning on the surface.
-        </Paragraph>
-        <Paragraph className=" mt-4">
-          Through this website, I aim to share my insights, experiences, and
-          creations with you. Whether you&apos;re a fellow developer seeking
-          solutions, a fellow writer in search of inspiration, or simply someone
-          who appreciates the finer aspects of design, there&apos;s something
-          here for you.
-        </Paragraph>
-        <Paragraph className=" mt-4">
-          Join me on this journey of bytes and narratives, logic and creativity,
-          code and prose. Together, we can explore the boundless possibilities
-          of technology and storytelling, all while reveling in the sheer beauty
-          of thoughtful design.
-        </Paragraph>
-        <Paragraph className=" mt-4">
-          Thank you for being here, and I can&apos;t wait to embark on this
-          adventure with you.
-        </Paragraph>
+      <div className="space-y-2">
+        <p>Probability and Mathematical Statistics</p>
+        <p>Fundamentals of Programming(C#)</p>
+        <p>Python Programming</p>
+        <p>Data Structures and Algorithms</p>
+        <p>GIS Application Software Development</p>
+        <p>Principles and Applications of Remote Sensing</p>
+        <p>Principles and Applications of GIS</p>
+        <p>Digital Image Processing for Remote Sensing</p>
+        <p>Photogrammetry</p>
+        <p>Computer-aided cartography</p>
+        <p>Cartography</p>
+        <p>Transportation Engineering Surveying</p>
+        <p>
+          <span className="text-blue-600 italic">Audited: </span>
+          English Listening (Native-speaking Instructor)
+        </p>
       </div>
+    </div>
+
+  </div>
+</details>
+
+    {/* 2024-2025 */}
+    <details className="group border-b border-neutral-200 pb-3">
+      <summary className="cursor-pointer list-none flex items-center justify-between gap-4 py-2">
+        <span className="font-bold text-primary">
+          2024–2025 (Year 1)
+        </span>
+
+        <span className="text-secondary text-sm transition-transform group-open:rotate-180">
+          ↓
+        </span>
+      </summary>
+
+      <div className="mt-4 ml-1 space-y-6 text-sm text-secondary">
+
+        <div>
+          <div className="space-y-2">
+            <p>Advanced Mathematics</p>
+            <p>Linear Algebra</p>
+            <p>University Physics</p>
+            <p>University Physics Laboratory</p>
+            <p>Introduction to Geomatics Science</p>
+            <p>Fundamentals of Surveying</p>
+
+          </div>
+        </div>
+
+      </div>
+    </details>
+
+  </div>
+</section>
     </div>
   );
 }

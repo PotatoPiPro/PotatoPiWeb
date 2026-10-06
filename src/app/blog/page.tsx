@@ -1,31 +1,109 @@
 import { Container } from "@/components/Container";
 import { Heading } from "@/components/Heading";
-import { Highlight } from "@/components/Highlight";
 import { Paragraph } from "@/components/Paragraph";
-import { Products } from "@/components/Products";
-import { getAllBlogs } from "../../../lib/getAllBlogs";
-import { Blogs } from "@/components/Blogs";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blogs | John Doe",
-  description:
-    "John Doe is a developer, writer and speaker. He is a digital nomad and travels around the world while working remotely.",
+  title: "Passages | Paishuo Zhang",
+  description: "A collection of passages and notes by Paishuo Zhang.",
 };
 
-export default async function Blog() {
-  const blogs = await getAllBlogs();
-  const data = blogs.map(({ component, ...meta }) => meta);
+const collections = [
+  {
+    title: "细节与勇气——乙巳年末回顾 (2026.02)",
+    href: "/pdfs/细节与勇气——乙巳年末回顾.pdf",
+    description: "湖海江山。",
+  },
+  {
+    title: "向边界去——写在大二始 (2025.09)",
+    href: "/pdfs/向边界去——写在大二始.pdf",
+    description: "No More Freshman.",
+  },
+  {
+    title: "独立三边静——高中后记 (2024.09)",
+    href: "/pdfs/独立三边静 —— 高考后记.pdf",
+    description: "高中回忆。",
+  },
+];
 
+const highlights = [
+  {
+    title: "好的，坏的，我们的足球——写在新泽西前 (2026.07)",
+    href: "/pdfs/我们的足球 ——写在新泽西前.pdf",
+    description: "To Let a Good Thing Die.",
+  },
+];
+
+export default function Blog() {
   return (
     <Container>
       <span className="text-4xl">📝</span>
-      <Heading className="font-black pb-4">I write about technology</Heading>
-      <Paragraph className="pb-10">
-        Ever since <Highlight> I was a kid</Highlight>, I&apos;ve been
-        fascinated by technology.
+
+      <Heading className="font-black pb-4">
+        Passages
+      </Heading>
+
+      <Paragraph className="max-w-xl">
+        写的一些文字，大多关于生活记录。有想过文笔是否太幼稚，不过既然是自己的真实想法，于是就都完整放上来了。希望你读的开心！
       </Paragraph>
-      <Blogs blogs={data} />
+
+      {/* Summary */}
+      <section className="mt-14">
+        <Heading
+          as="h2"
+          className="font-black text-xl md:text-xl lg:text-xl"
+        >
+          Summary
+        </Heading>
+
+        <div className="mt-6 space-y-7">
+          {collections.map((passage) => (
+            <div key={passage.title}>
+              <a
+                href={passage.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-900 hover:underline underline-offset-4"
+              >
+                {passage.title}
+              </a>
+
+              <p className="text-secondary text-sm mt-2">
+                {passage.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Thoughts */}
+      <section className="mt-14">
+        <Heading
+          as="h2"
+          className="font-black text-xl md:text-xl lg:text-xl"
+        >
+          Thoughts
+        </Heading>
+
+        <div className="mt-6 space-y-7">
+          {highlights.map((passage) => (
+            <div key={passage.title}>
+              <a
+                href= {passage.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-900 hover:underline underline-offset-4"
+              >
+                {passage.title}
+              </a>
+
+              <p className="text-secondary text-sm mt-2">
+                {passage.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
     </Container>
   );
 }

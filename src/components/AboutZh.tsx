@@ -73,6 +73,15 @@ export default function AboutZh() {
         </Heading>
 
         <div className="mt-6 space-y-4">
+          <div className="flex items-baseline justify-between gap-4">
+            <p className="text-primary">
+              本科生国家奖学金
+            </p>
+
+            <p className="text-secondary text-xs whitespace-nowrap">
+              2026
+            </p>
+          </div>
 
           <div className="flex items-baseline justify-between gap-4">
             <p className="text-primary">

@@ -16,7 +16,7 @@ const posts = [
 export default function Home() {
   return (
     <div className="max-w-4xl">
-      <span className="text-4xl">🌎</span>
+      <span className="text-4xl">🌏</span>
       <Heading className="font-black mb-10">
         {" "}
         Home

@@ -12,6 +12,7 @@ import { Badge } from "./Badge";
 import { AnimatePresence, motion } from "motion/react";
 import { IconLayoutSidebarRightCollapse } from "@tabler/icons-react";
 import { isMobile } from "@/lib/utils";
+import { IconBrandGithub, IconMail } from "@tabler/icons-react";
 
 export const Sidebar = () => {
   const [open, setOpen] = useState(isMobile() ? false : true);
@@ -54,7 +55,7 @@ export const Navigation = ({
   const isActive = (href: string) => pathname === href;
 
   return (
-    <div className="flex flex-col space-y-8 my-14 relative z-[100]">
+    <div className="flex flex-col space-y-8 mt-6 relative z-[100]">
       {navlinks.map((link: Navlink) => {
         const Icon = link.icon;
         return (
@@ -108,9 +109,35 @@ const SidebarHeader = () => {
           PotatoPi
         </p>
 
-        <p className="text-secondary text-[12px] mt-3 leading-relaxed max-w-[210px]">
-          I hope you can accept nature as she is.
+        <p
+        className="font-serif italic text-secondary text-[14px] mt-3 leading-relaxed"
+      >
+        I hope you can accept nature as she is.
         </p>
+
+        {/* Social Links */}
+        <div className="flex items-center gap-5 mt-5">
+
+          <a
+            href="https://github.com/PotatoPiPro"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-secondary hover:text-primary transition"
+          >
+            <IconBrandGithub className="h-5 w-5" />
+          </a>
+
+
+          <a
+            href="mailto:polxpi@outlook.com"
+            className="text-secondary hover:text-primary transition"
+          >
+            <IconMail className="h-5 w-5" />
+          </a>
+
+        </div>
+
+
       </div>
     </div>
   );

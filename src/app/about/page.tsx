@@ -6,9 +6,9 @@ import { Metadata } from "next";
 import About from "@/components/About";
 
 export const metadata: Metadata = {
-  title: "About | Paishuo Zhang",
+  title: "About | PotatoPi",
   description:
-    "Paishuo Zhang is a junior at Lanzhou Jiaotong University majoring in Remote Sensing.",
+    "An idealist, maybe only today.",
 };
 
 export default function AboutPage() {
@@ -21,12 +21,12 @@ export default function AboutPage() {
       </Heading>
 
       <span className="text-secondary text-xs whitespace-nowrap">
-          Last Updated: Sep 25, 2026
+          Last Updated: Oct 14, 2026
       </span>
 
       <Paragraph className="max-w-xl mt-4">
         I&apos;m now a junior majoring in Remote Sensing at Lanzhou Jiaotong University.
-         I record my study and life here, hope you will find them interesting and feel free to contact. 
+        I work on image processing and microwave remote sensing. 
       </Paragraph>
 
       <About />

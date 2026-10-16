@@ -4,8 +4,8 @@ import { Paragraph } from "@/components/Paragraph";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Passages | Paishuo Zhang",
-  description: "A collection of passages and notes by Paishuo Zhang.",
+  title: "Passages | PotatoPi",
+  description: "The boundary of the language, is the boundary of the world.",
 };
 
 const collections = [

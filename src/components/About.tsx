@@ -73,7 +73,16 @@ export default function About() {
         </Heading>
 
         <div className="mt-6 space-y-4">
-          
+          <div className="flex items-baseline justify-between gap-4">
+            <p className="text-primary">
+              National Scholarship for Undergraduate Student
+            </p>
+
+            <p className="text-secondary text-xs whitespace-nowrap">
+              2026
+            </p>
+          </div>
+
          <div className="flex items-baseline justify-between gap-4">
           <p className="text-primary">
             Lanzhou Jiaotong University Merit Student Scholarship
@@ -167,7 +176,18 @@ export default function About() {
         <p>Photogrammetry</p>
         <p>Computer-aided cartography</p>
         <p>Cartography</p>
-        <p>Transportation Engineering Surveying</p>
+        <p>
+          Transportation Engineering Surveying (with{" "}
+          <a
+            href="/pdfs/交通工程测量作业（终）.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:text-blue-800 transition-colors"
+          >
+            Homework Summary
+          </a>
+          )
+        </p>
         <p>
           <span className="text-blue-600 italic">Audited: </span>
           English Listening (Native-speaking Instructor)

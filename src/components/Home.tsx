@@ -5,7 +5,7 @@ import { Heading } from "@/components/Heading";
 const posts = [
   {
     title: "Hello World!",
-    date: "2026.10.04",
+    date: "2026 .10 .04",
     description:
       "First blog of mine, and Welcome to my website! ",
     image: "/images/Hi.png",

@@ -55,11 +55,12 @@ export default function HelloWorldPage() {
           </Paragraph>
 
           <Paragraph className="mt-4 leading-8">
-          The reason I call it PotatoPi is that there is a <em>Pi</em> in my name and I like eating <em>potato</em> so much. I hope it can be a place displaying my experiences, and also recording my life.
+          The reason I call it  <strong>PotatoPi</strong> is that there is a  <strong>Pi</strong> in my name and I like eating  <strong>Potato</strong> so much. I hope it can be a place displaying my experiences, and also recording my life.
            </Paragraph>
 
           <Paragraph className="mt-4 leading-8">
-            (I haven't decided yet which language to use for this site; for now, I've chosen English because it's really difficult to choose a proper font for Chinese...)
+            (I haven't decided yet which language to use for this site; for now, I've chosen English because it's really difficult to choose a proper font for Chinese ...
+            and maybe this will be a good way to practice English as well:) )
           </Paragraph>
         </section>
 

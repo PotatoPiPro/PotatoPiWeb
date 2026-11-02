@@ -44,11 +44,31 @@ export default function Blog() {
       </Heading>
 
       <Paragraph className="max-w-xl">
-        写的一些文字，大多关于生活记录。有想过文笔是否太幼稚，不过既然是自己的真实想法，于是就都完整放上来了。希望你读的开心！
+        写的一些文字，大多关于生活记录。有想过文笔或者理解是否太幼稚，不过既然是自己的真实想法，于是就都完整放上来了。希望你读的开心！
       </Paragraph>
 
+      {/* Epigraph */}
+      <blockquote className="max-w-2xl mt-5 mb-8 font-serif italic text-secondary">
+        <div className="relative pl-5 pr-5 pt-5 pb-5">
+         
+          {/* 引文 */}
+          <p className="text-[15px] leading-7">
+            “ The horror of that moment, ” the King went on,
+            “ I shall never, never forget. ”
+            <br />
+            “ You will, though, ” the Queen said,
+            “ if you don’t make a memorandum of it. ”
+          </p>
+
+        </div>
+
+        <p className="text-sm text-right mt-3">
+          — Lewis Carroll,  <span>Through the Looking-Glass</span>
+        </p>
+      </blockquote>
+
       {/* Summary */}
-      <section className="mt-14">
+      <section className="mt-8">
         <Heading
           as="h2"
           className="font-black text-xl md:text-xl lg:text-xl"

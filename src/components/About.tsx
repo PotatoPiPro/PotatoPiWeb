@@ -18,8 +18,6 @@ export default function About() {
           Computer Vision
           <br />
           Physics
-          <br />
-          Microwave Remote Sensing
         </Paragraph>
       </section>
 

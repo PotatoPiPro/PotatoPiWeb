@@ -26,7 +26,7 @@ export default function AboutPage() {
 
       <Paragraph className="max-w-xl mt-4">
         I&apos;m now a junior majoring in Remote Sensing at Lanzhou Jiaotong University.
-        I work on image processing and microwave remote sensing. 
+        I work on image processing and machine learning. 
       </Paragraph>
 
       <About />

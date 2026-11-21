@@ -21,12 +21,12 @@ export default function AboutPage() {
       </Heading>
 
       <span className="text-secondary text-xs whitespace-nowrap">
-          Last Updated: Oct 14, 2026
+          Last Updated: Nov 21, 2026
       </span>
 
       <Paragraph className="max-w-xl mt-4">
-        I&apos;m now a junior majoring in Remote Sensing at Lanzhou Jiaotong University.
-        I work on image processing and machine learning. 
+        I&apos;m now a junior majoring in Remote Sensing at Lanzhou Jiaotong University,
+        working on image processing and machine learning. 
       </Paragraph>
 
       <About />
